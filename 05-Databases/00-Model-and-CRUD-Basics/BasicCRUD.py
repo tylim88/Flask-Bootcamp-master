@@ -3,12 +3,12 @@
 # This is just an overview, usually we won't run a single script like this
 # Our goal here is to just familiarize ourselves with CRUD commands
 
-from BasicModelApp import db,Puppy
+from BasicModelApp import db, Puppy
 
 ###########################
 ###### CREATE ############
 #########################
-my_puppy = Puppy('Rufus',5)
+my_puppy = Puppy('Rufus', 5)
 db.session.add(my_puppy)
 db.session.commit()
 
@@ -20,7 +20,7 @@ db.session.commit()
 # Also lots of executor options
 # all(), first(), get(), count(), paginate()
 
-all_puppies = Puppy.query.all() # list of all puppies in table
+all_puppies = Puppy.query.all()  # list of all puppies in table
 print(all_puppies)
 print('\n')
 # Grab by id
@@ -29,8 +29,8 @@ print(puppy_one)
 print(puppy_one.age)
 print('\n')
 # Filters
-puppy_sam = Puppy.query.filter_by(name='Sammy') # Returns list
-print(puppy_sam)
+puppy_sam = Puppy.query.filter_by(name='Sammy')  # Returns list
+print(puppy_sam.all())  # print all that match
 print('\n')
 ###########################
 ###### UPDATE ############
@@ -52,5 +52,5 @@ db.session.commit()
 
 
 # Check for changes:
-all_puppies = Puppy.query.all() # list of all puppies in table
+all_puppies = Puppy.query.all()  # list of all puppies in table
 print(all_puppies)

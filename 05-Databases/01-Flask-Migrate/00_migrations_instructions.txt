@@ -16,11 +16,13 @@ You did not provide the FLASK_APP environment variable.
 
 Then run the following code:
 
-MacOS/Linux users run:
+MacOS/Linux(bash terminal) users run:
 export FLASK_APP=BasicModelApp.py
 
-Windows Users need to run:
+Windows Users(power shell) need to run:
 set FLASK_APP=BasicModelApp.py
+$env:FLASK_APP = "BasicModelApp.py"
+http://flask.pocoo.org/docs/dev/cli/#environment-variables-from-dotenv
 
 This allows the flask command line tools to understand what Flask App you are
 referencing. More info on this: http://flask.pocoo.org/docs/0.12/cli/
